@@ -47,4 +47,4 @@ print(EqualNumbersStrings(25,"76","75")) # False
 # Now testing with three strings numbers.
 print(EqualNumbersStrings("25","76","75")) # False
 # Now testing with three strings numbers two are the same.
-print(EqualNumbersStrings("25","25","75")) # False
+print(EqualNumbersStrings("25","25","75")) # True
