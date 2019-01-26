@@ -25,16 +25,52 @@ myUniqueList = []
 myLeftovers = []
 
 # Defining and Creating a function one true and false with creating an added values/integers/input and strings
-# First one here is a function to add the "myUniqueList" with the statement needing to be if the value does exist, it should not be added, and the function should return False
-def addmyUniqueListData(insertData)
-	if insertData in myUniqueList:
-		addmyUniqueListData(insertData)
-		return False
-	else:
-		myUniqueList.append(insertData)
-		return True
+# First one here is a function to add the "myUniqueList" with the statement needing to be if the value does exist, it should not be added, and the function should return False.
+def addmyUniqueListData(insertData):
+    if insertData in myUniqueList:
+        addmyDuplicateListData(insertData)
+        return False
+    else:
+        myUniqueList.append(insertData)
+        return True
 # Lastly create another function to add data to reject from the list that exist
 
 # Next I am creating a function called addDuplicateDataToList() to add rejected data to list
-def addmyDuplicateListData(insertData):
-    return myLeftovers.append(insertData)
+def addmyDuplicateListData(sameData):
+    return myLeftovers.append(sameData)
+
+# Testing all datas and strings to the existing two functions.
+
+addmyUniqueListData("Python")
+addmyUniqueListData(33)
+addmyUniqueListData("Developer")
+addmyUniqueListData("45")
+print(myUniqueList)
+print(myLeftovers)
+# Results so adding works and leftovers is empty perfect now testing and taking away from list below
+# ['Python', 33, 'Developer', '45']
+# []
+addmyDuplicateListData(33)
+addmyDuplicateListData("45")
+print(myUniqueList)
+print(myLeftovers)
+# Results so leftovers I took out 33 and "45"
+# ['Python', 33, 'Developer', '45']
+# [33, '45']
+
+# Lastly
+addmyUniqueListData("professional")
+addmyUniqueListData(65)
+addmyDuplicateListData("professional")
+addmyDuplicateListData(65)
+print(myUniqueList)
+print(myLeftovers)
+# Results overall it works after testing many parts.
+# ['Python', 33, 'Developer', '45', 'professional', 65]
+# [33, '45', 'professional', 65]
+
+
+
+
+
+
