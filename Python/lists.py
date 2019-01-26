@@ -26,10 +26,15 @@ myLeftovers = []
 
 # Defining and Creating a function one true and false with creating an added values/integers/input and strings
 # First one here is a function to add the "myUniqueList" with the statement needing to be if the value does exist, it should not be added, and the function should return False
-def addmyUniqueList(insertData)
+def addmyUniqueListData(insertData)
 	if insertData in myUniqueList:
 		addmyUniqueListData(insertData)
 		return False
 	else:
 		myUniqueList.append(insertData)
 		return True
+# Lastly create another function to add data to reject from the list that exist
+
+# Next I am creating a function called addDuplicateDataToList() to add rejected data to list
+def addmyDuplicateListData(insertData):
+    return myLeftovers.append(insertData)
