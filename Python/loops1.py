@@ -24,3 +24,11 @@ for number in range(101): # start the number range from 0,1 to 101
         print("Fizz") # print out Fizz condition from above.
     elif number % 5 == 0: # create a condition for multiples of five print "Buzz"
         print("Buzz") # print out Buzz condition from above.
+    else:
+        if number > 1:
+            for n in range(2,number):
+                if (number % n) == 0 :
+                    print(number)
+                    break
+            else:
+                print(number, "--prime")
