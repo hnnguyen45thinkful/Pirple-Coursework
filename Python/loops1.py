@@ -19,11 +19,13 @@ By: Hieu Nguyen
 # Instead of only printing "fizz", "buzz", and "fizzbuzz", add a fourth print statement: "prime". You should print this whenever you encounter a number that is prime (divisible only by itself and one). As you implement this, don't worry about the efficiency of the algorithm you use to check for primes. It's okay for it to be slow.
 for number in range(101): # start the number range from 0,1 to 101
     if number % 3 == 0 and number % 5 == 0: # create a condition for numbers multiples of both three and five print "FizzBuzz".
-        print("FizzBuzz") # print out FizzBuzz condition from above.
+        print(number, "FizzBuzz") # print out FizzBuzz condition from above.
     elif number % 3 == 0: # create a condition for multiples of three print "Fizz"
-        print("Fizz") # print out Fizz condition from above.
+        print(number, "Fizz") # print out Fizz condition from above.
     elif number % 5 == 0: # create a condition for multiples of five print "Buzz"
-        print("Buzz") # print out Buzz condition from above.
+        print(number, "Buzz") # print out Buzz condition from above.
+    if number == 3 or number == 5: # create a prime condition and also print it out.
+        print(number, "prime")
     else:
         if number > 1:
             for n in range(2,number):
@@ -31,4 +33,4 @@ for number in range(101): # start the number range from 0,1 to 101
                     print(number)
                     break
             else:
-                print(number, "--prime")
+                print(number, "prime")
