@@ -74,6 +74,8 @@ varName(); //Hieu
 // Let and Constant
 // Both "let" and "const" are both new features used in ES6 since ES5 uses more on "var" which is variables. They are both different from each other since one can be reassigned/modified and another can be used as a blocked scope variables. "Const" variable values cannot be changed, but only can be modified meaning it has to be an assigned value, for instance when declaring a variable with a local scope (block) it can be only used once and when assigning a new one it may cause an error. I like to think constant like in mathematics like Pi = 3.14 or e = 2.718 which are real number values. As for "let" are used on block scope variables and whereas they cannot be used out of the block when they are declared and used. Meaning the values you use "let" can be used many times and overwritten to assume different cases. I like to think the "let" variable as making more cases and assuming more assumptions using it in a block scopes just like "constant" but its similar to "var" in global scope function and assigning variables BUT REMEMBER let CANNOT BE "HOISTED" or "HOISTING". 
 
+//Here is my let examples:
+
 let myNameLet = "Hieu";
 
 function globalScopeName() {
@@ -85,8 +87,8 @@ globalScopeName();//Hieu
 
 function letBlockScope() {
     if(true) {
-        // myLetNameIfBlock variable scope is if block specific
-        // myLetName variable scope is if block specific
+        // myNameBlockLet variable scope is if block specific
+        // myNameLet variable scope is if block specific
         let myNameBlockLet = "Hieu";
         let myNameLet = "Hieu Ngoc Nguyen"
         console.log("myNameLet variable inside of this if block is my full name: " + myNameLet + '.');//Hieu Ngoc Nguyen.
@@ -98,5 +100,36 @@ function letBlockScope() {
 
 letBlockScope();//Hieu.
 
+//Here is my constant examples:
+
+const myNameConstant = "Constant Hieu";
+const myTestConstant = "Constant Test"
+
+function constGlobalScope() {
+    // myNameConstant variable scope is global used
+    console.log(myNameConstant);
+}
 
 
+constGlobalScope();//Constant Hieu
+
+
+function constantBlockScope() {
+    // Gets 'TypeError: Assignment to constant variable' if we uncomment the below line
+    // myConstName = "ConstModified";
+
+    if(true) {
+        // myConstNameIfBlock variable scope is if block specific
+        // myConstName variable scope is if block specific
+        const myNameConstantBlock = "Constant Hieu";
+        const myNameConstant = "Constant Test"
+        // Here I get 'TypeError: Assignment to constant variable' from the console log so now if I uncomment the below line
+        // myTestConstant = "ModifyConstant";
+        console.log("myNameContant variable inside the if block is: " + myNameConstant + '.');
+    }
+    // myNameConstant cannot be accessed outside the if block - Gets this 'ReferenceError: myNameConstant is not defined' if we uncomment the below line
+    //console.log(myNameConstantBlock);
+    console.log("myNameConstant value inside the function but outside the if block is: " + myNameConstant + '.');
+}
+
+constantBlockScope();//Constant Hieu
