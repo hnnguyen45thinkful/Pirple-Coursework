@@ -39,10 +39,35 @@ function greeting(name) {
 }
 // 'Hello, my name is Hieu.'
 
-// Same from the above now calling it at the end.
+// Same from the above now calling it at the end reversing.
 function greeting(name) {
     console.log('Hello, my name is ' + name + ".");
 }
 greeting('Hieu');
 // 'Hello, my name is Hieu.'
+
+//Variables
+// In my words, variables can be used out of their scope in a function or deckaring them in the global scope or inside a function. For instance, "var" can declared inside the function which can make the entire function become the scope of var This is used a lot in ES5 before ES6 comes out with "let" and "const", but we will focus on "var". After using variables they can be used different and mutiple times by repeating or overwrittening them. Using var can be equal to declaring either empty value or assigning it to something.
+
+//Here are some examples:
+//Example 1:
+var myName = "Hieu";// myName variable scope is global
+
+function globalScope() { 
+    console.log(myName);
+}
+globalScope(); //Hieu
+//Example 2:
+function functionScope() {
+    //Now my var myName is a variable scope is global inside the function
+    var myName = "Hieu";
+    console.log(myName);
+}    
+functionScope(); //Hieu
+//Example 3
+function varName() {
+    varName = "Hieu"; //declare my variable without "var"
+    console.log(varName);
+}
+varName(); //Hieu
 
