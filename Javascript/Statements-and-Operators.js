@@ -23,3 +23,20 @@ By: Hieu Nguyen
 // This cake is either vanilla or chocolate.
 // This cake is not chocolate.
 // Therefore, this cake is vanilla.
+
+//Create an array of mens names
+const mensarrays = ["Mike", "Socrates", "Edison", "Albert", "Scot"];
+const mensThatAreMortals = true;
+//Create an if-statement to print out the console.log below to show the EXACT statements given and also give opposite (NOT). 
+if (mensThatAreMortals) {
+    console.log("All men are mortal");
+} else {
+    console.log("All men are not mortal");
+}
+//Same thing from above but I used the includes the mensarrays with "Socrates" to complete the statements give from above. Also if the opposite case (NOT) with all the console.log()s.
+if (mensarrays.includes("Socrates") && mensThatAreMortals) {
+    console.log("Socrates is a men");
+    console.log("Therefore, socrates is mortal.");
+} else {
+    console.log("Socrates is not a men");
+}
