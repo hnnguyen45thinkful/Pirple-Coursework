@@ -42,3 +42,34 @@ namesArr.forEach((names) => {
 // This person named John Smith a MORTAL? (True or False) ? false
 // This person named Jane Smith a MORTAL? (True or False) ? false
 // This person named King James a MORTAL? (True or False) ? false
+
+//Extra Credit:
+//Creating a flavors of cake for three and only one is my favorite.
+const cakeFlavors = ["vanilla", "strawberry", "chocolate"];
+
+//Similar to above but using a arrow function and also create a boolean true and false using .push
+const checkFlavorChocolate = (cakeFlavors) => {
+    const topFlavor = [] ;
+    //our cake will be checked,if chocolate then push true else false
+    cakeFlavors.forEach((flavor) => {
+        if(flavor === "chocolate") {
+            topFlavor.push(true);
+        } else {
+            topFlavor.push(false);
+        }
+    });
+    return topFlavor;
+};
+
+// Create another one with two arguments and now print out the statements.
+const checkCakeChocolateFinal = (cakeFlavors, checkChoco) => {
+    checkChoco.forEach((flavor, i) => {
+        if(flavor){
+            console.log("This cake is CHOCOLATE!!🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂 ");
+        }
+        else{
+            console.log("This cake is not chocolate, it is " + cakeFlavors[i]);
+        }
+    })
+}
+checkCakeChocolateFinal(cakeFlavors, checkFlavorChocolate(cakeFlavors));
