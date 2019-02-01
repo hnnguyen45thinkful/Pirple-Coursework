@@ -62,8 +62,8 @@ const checkFlavorChocolate = (cakeFlavors) => {
 };
 
 // Create another one with two arguments and now print out the statements.
-const checkCakeChocolateFinal = (cakeFlavors, checkChoco) => {
-    checkChoco.forEach((flavor, i) => {
+const checkCakeChocolateFinal = (cakeFlavors, checkForChocolate) => {
+    checkForChocolate.forEach((flavor, i) => {
         if(flavor){
             console.log("This cake is CHOCOLATE!!🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂 ");
         }
