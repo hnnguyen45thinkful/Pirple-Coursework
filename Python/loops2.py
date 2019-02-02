@@ -14,4 +14,9 @@ By: Hieu Nguyen
 # Try to determine the maximum width and height that your terminal and screen can comfortably fit without wrapping. If someone passes a value greater than either maximum, your function should return False. 
 
 
-def gamePlayingBoard(rows, columns)
+# def gamePlayingBoard(rows, columns)
+"""
+Homework Assignment #6
+Advanced Loops
+"""
+

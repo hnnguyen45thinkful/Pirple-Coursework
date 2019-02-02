@@ -65,7 +65,7 @@ const checkFlavorChocolate = (cakeFlavors) => {
 const checkCakeChocolateFinal = (cakeFlavors, checkForChocolate) => {
     checkForChocolate.forEach((flavor, i) => {
         if(flavor){
-            console.log("This cake is CHOCOLATE!!🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂 ");
+            console.log("This cake is CHOCOLATE!!🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂");
         }
         else{
             console.log("This cake is not chocolate, it is " + cakeFlavors[i]);
