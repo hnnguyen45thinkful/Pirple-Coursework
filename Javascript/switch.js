@@ -56,13 +56,13 @@ const validateInputsStringsNumbers = (number1, number2, string1, string2) => {
     return false;
 };
 
-//@desc: convert time in seconds. 
 // I need to covert the time into seconds 
 const convertTimeToSeconds = (label, value) => {
-    const labelSeconds = label.toLowerCase();
+    const labelTimeFormat = label.toLowerCase();
 // Here is the resources for all converting seconds to one minute, one hour, and one WHOLE day
 //https://www.rapidtables.com/calc/time/seconds-in-hour.html
-    switch (labelSeconds) {
+//Using the switch statements for seconds and cases for each one with plurals (s)
+    switch (labelTimeFormat) {
         case "second":
         case "seconds": // 1 second passes by each time.
             return value;
@@ -80,3 +80,63 @@ const convertTimeToSeconds = (label, value) => {
     }
 };
 
+//Finally add the timeAdder function with the parameters value1, value2, label1, label2
+const timeAdder = (value1, label1, value2, label2) => {
+    
+     //test string and number inputs.
+    const inputValidTime = validateInputsStringsNumbers(value1, value2, label1, label2);//Using the function from the starting point from the top.
+    const time = [];// Create a black time array for minute and seconds for day
+
+    if(inputValidTime) {
+        const time1 = convertTimeToSeconds(label1, value1);
+        const time2 = convertTimeToSeconds(label2, value2);
+        let timeInSecondsCombined; //assuming this in let and calling it in the boolean time if statement.
+
+        if(Boolean(time1) && Boolean(time2)){
+            timeInSecondsCombined = time1 + time2;
+        }
+  
+        // All the converison total time format I used the seconds from my switch statements above.
+        if (timeInSecondsCombined === 86400) {
+            time.push(1, "day");
+        } else if(timeInSecondsCombined % 86400 === 0 && timeInSecondsCombined > 86400 ){
+            const days = timeInSecondsCombined/86400;
+            time.push(days, "days");
+        } else if(timeInSecondsCombined === 3600) {
+            time.push(1, "hour");
+        } else if(timeInSecondsCombined % 3600 === 0 && timeInSecondsCombined > 3600) {
+            const hours = timeInSecondsCombined/3600;
+            time.push(hours, "hours");
+        } else if(timeInSecondsCombined === 60) {
+            time.push(1, "minute");
+        } else if(timeInSecondsCombined % 60 === 0 && timeInSecondsCombined > 60) {
+            const minutes = timeInSecondsCombined/60;
+            time.push(minutes, "minutes");
+        } else if(timeInSecondsCombined === 1) {
+            time.push(1, "second");
+        } else {
+            time.push(timeInSecondsCombined, "seconds");
+        }
+        return time; // Call all together in a array (blank) for minute(s) and second(s)
+    }
+
+    return false; // otherwise its FALSE if not true.
+};
+
+
+//Test all examples to match outputs from the details from above using console.log().
+
+console.log(timeAdder(1,"minute",3,"minutes"));// [ 4, 'minutes' ]
+console.log(timeAdder(5,"days",25,"hours"));// [ 145, 'hours' ]
+console.log(timeAdder(1,"minute",240,"seconds"));// [ 5, 'minutes' ]
+console.log(timeAdder(5,"hour",5,"minutes")); // false
+console.log(timeAdder(false,false,5,"minutes"));// false
+console.log(timeAdder({},"days",5,"minutes")); // false
+console.log(timeAdder(20,"hours",4,"hours")); // [ 1, 'day' ]
+console.log(timeAdder(20,"hours",5,"hours"));// [ 25, 'hours' ]
+//Other examples to test
+console.log();
+console.log();
+console.log();
+console.log();
+console.log();
