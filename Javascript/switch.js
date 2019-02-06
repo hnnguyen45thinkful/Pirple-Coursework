@@ -135,8 +135,7 @@ console.log(timeAdder({},"days",5,"minutes")); // false
 console.log(timeAdder(20,"hours",4,"hours")); // [ 1, 'day' ]
 console.log(timeAdder(20,"hours",5,"hours"));// [ 25, 'hours' ]
 //Other examples to test
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
+console.log(timeAdder(6,"hours",10,"minute")); // false
+console.log(timeAdder(0,"minute",0,"minutes")); // false
+console.log(timeAdder(36,"hours",4,"days")); // [ 132, 'hours' ]
+console.log(timeAdder(1,"hour",1,"day"));  // [ 25, 'hours' ]
