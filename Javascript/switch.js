@@ -51,7 +51,7 @@ const validateInputsStringsNumbers = (number1, number2, string1, string2) => {
             const lastCharacter2 = string2.substr(-1);
             
             // I need to make a validate combinations of inputs for the characters and numbers.
-            if(!(lastCharacter1 !== "s" && num1 > 1 || lastChar1 === "s" && number1 === 1  || 
+            if(!(lastCharacter1 !== "s" && number1 > 1 || lastCharacter1 === "s" && number1 === 1  || 
                             lastCharacter2 !== "s" && number2 > 1 || lastCharacter2 === "s" && number2 === 1)) {
                 return true;
             }
