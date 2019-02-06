@@ -35,20 +35,15 @@ By: Hieu Nguyen
 // timeAdder(20,"hours",5,"hours")
 // You would return [25,"hours"] because you could not use "days" with an integer value to represent 25 hours.
 
-/*
- *  Assignment: Homework Assignment #5: Switch Statements.
- *  Description:  Time adder - adds two time values together.
- */
-
-//@desc: validate string and number inputs. 
+//Creating string and numbers inputs using constant variable with numbers and strings 
 const validateInputsStringsNumbers = (number1, number2, string1, string2) => {
-    //validate input types.
+    // First I need to validate input types for each the numbers and strings.
     if(typeof number1 === "number" && typeof number2 === "number" && 
                                    typeof string1 === "string" && typeof string2 === "string"){
         //I need to validate numbers to make them positive > 0                            
         if(number1 > 0 && number2 > 0) {
-            const lastCharacter1 = string1.substr(-1);
-            const lastCharacter2 = string2.substr(-1);
+            const lastCharacter1 = string1.substr(-1);//substr = subtract string last letter of the character
+            const lastCharacter2 = string2.substr(-1);//substr = subtract string last letter of the character
             
             // I need to make a validate combinations of inputs for the characters and numbers.
             if(!(lastCharacter1 !== "s" && number1 > 1 || lastCharacter1 === "s" && number1 === 1  || 
@@ -59,5 +54,29 @@ const validateInputsStringsNumbers = (number1, number2, string1, string2) => {
     }
     
     return false;
+};
+
+//@desc: convert time in seconds. 
+// I need to covert the time into seconds 
+const convertTimeToSeconds = (label, value) => {
+    const labelSeconds = label.toLowerCase();
+// Here is the resources for all converting seconds to one minute, one hour, and one WHOLE day
+//https://www.rapidtables.com/calc/time/seconds-in-hour.html
+    switch (labelSeconds) {
+        case "second":
+        case "seconds": // 1 second passes by each time.
+            return value;
+        case "minute":
+        case "minutes":
+            return value*60; //there is 60 seconds in a minute
+        case "hour":
+        case "hours":
+            return value*60*60; // there is 3600 seconds in a hour 
+        case "day":
+        case "days":
+            return value*60*60*24; // there is 86000 seconds in a WHOLE day.              
+        default:
+            return 0;
+    }
 };
 
