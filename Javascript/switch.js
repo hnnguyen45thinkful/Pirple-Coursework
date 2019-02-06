@@ -34,3 +34,30 @@ By: Hieu Nguyen
 // But if they called
 // timeAdder(20,"hours",5,"hours")
 // You would return [25,"hours"] because you could not use "days" with an integer value to represent 25 hours.
+
+/*
+ *  Assignment: Homework Assignment #5: Switch Statements.
+ *  Description:  Time adder - adds two time values together.
+ */
+
+//@desc: validate string and number inputs. 
+const validateInputsStringsNumbers = (number1, number2, string1, string2) => {
+    //validate input types.
+    if(typeof number1 === "number" && typeof number2 === "number" && 
+                                   typeof string1 === "string" && typeof string2 === "string"){
+        //I need to validate numbers to make them positive > 0                            
+        if(number1 > 0 && number2 > 0) {
+            const lastCharacter1 = string1.substr(-1);
+            const lastCharacter2 = string2.substr(-1);
+            
+            // I need to make a validate combinations of inputs for the characters and numbers.
+            if(!(lastCharacter1 !== "s" && num1 > 1 || lastChar1 === "s" && number1 === 1  || 
+                            lastCharacter2 !== "s" && number2 > 1 || lastCharacter2 === "s" && number2 === 1)) {
+                return true;
+            }
+        }
+    }
+    
+    return false;
+};
+
