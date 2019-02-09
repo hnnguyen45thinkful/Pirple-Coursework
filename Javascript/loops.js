@@ -18,3 +18,12 @@ By: Hieu Nguyen
 // Extra Credit:
 // Instead of only printing "fizz", "buzz", and "fizzbuzz", add a fourth print statement: "prime". You should print this whenever you encounter a number that is prime (divisible only by itself and one). As you implement this, don't worry about the efficiency of the algorithm you use to check for primes. It's okay for it to be slow.
 
+//I need to create a prime number checker start at 2 since 0 and 1 are prime to itself.
+//Created a function and with a for loop statement
+function primeNumberChecker(numbers) {
+    for (let i = 2; i < numbers; i++)
+        if (num % i === 0) //if the number is modulus to zero
+        return false;// returns to false otherwise
+    
+    return numbers !== 0 &&  numbers !== 1; //if the numbers are not 0 and 1. Opposite 
+}
