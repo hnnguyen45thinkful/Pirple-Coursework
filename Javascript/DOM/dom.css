@@ -15,9 +15,9 @@ By: Hieu Nguyen
 // 7. In the <head> of the document, add a <title> tag that matches the text in the <h1> you added in step 1.*/
 
 body {
-      width: auto;
       margin: 0 auto;
       text-align: center;
+      width: auto;
      }
 
 h1 {
@@ -29,45 +29,62 @@ h2 {
 	background-color: black; 
 	color: green;
 }
+.color-name {
+    position: relative;
+    left: 0%;
+    top: 100%;
+    font-weight: bold;
+    font-size: 20px;
+        }
+
 
 #rectangleWrapper {
-
+			width: 100%;
+            align-content: space-around;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
         }
 
 .rectangleDisplay {
-	
+            color: #000;
+            height: 100px;
+            margin: 30px;
+            width: 200px;
 }
 
 #rectangle-color-1 {
-	background-color:#1D8348 ;
+	background-color:#1D8348;
 }
 
 #rectangle-color-2 {
-	background-color: ;	
+	background-color:#117A65;	
 }
 
 #rectangle-color-3 {
-	background-color: ;
+	background-color:#2C3E50;
 }
 
 #rectangle-color-4 {
-	background-color: ;
+	background-color:#A93226;
 }
 
 #rectangle-color-5 {
-	background-color: ;
+	background-color:#48C9B0;
 }
 
 #rectangle-color-6 {
-	background-color:#A6ACAF ;
+	background-color:#A6ACAF;
 }
 
 #rectangle-color-7 {
-	background-color: ;
+	background-color:#DC7633;
 }
 
 #rectangle-color-8 {
-	background-color: ;
+	background-color:#A569BD;
 }
 
 #rectangle-color-9 {
@@ -75,5 +92,6 @@ h2 {
 }
 
 #rectangle-color-10 {
-	background-color: ;
+	background-color:#85C1E9;
 }
+
