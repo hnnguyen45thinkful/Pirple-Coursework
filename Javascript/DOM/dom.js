@@ -16,15 +16,15 @@ By: Hieu Nguyen
 const rectangles = document.querySelectorAll(".rectangleDisplay");//using document.querySelectorAll() to get all rectangles information
 const title = document.querySelector(".heading-title"); //same from above just only the specific one and only the first one.
 const head = document.querySelector("head");//same but diffrent property from above
-console.log("Here are the rectangles IDs:");
-    let x = 1 ;
-    for( const  prop  of rectangles){
+console.log("Here are the rectangles IDs:"); // created a console.log display
+    let x = 1 ; //start at 1 since there are 1 to 10 total
+    for( const prop of rectangles){ //created a for if statement with rectangles in prop and generate all rectangle IDs
         if (x <= rectangles.length) {
             console.log("rectangle " + x +" id : #" + prop.id);
             x += 1;
         }
     }
-    const newElement = document.createElement("title");
+    const newElement = document.createElement("title");//Show all information from title and head with new element.
     newElement.innerText = title.textContent;
     head.appendChild(newElement);
 
