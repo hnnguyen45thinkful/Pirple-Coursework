@@ -12,25 +12,32 @@ By: Hieu Nguyen
 # Extra Credit:
 
 # Try to determine the maximum width and height that your terminal and screen can comfortably fit without wrapping. If someone passes a value greater than either maximum, your function should return False. 
-
-
-# def gamePlayingBoard(rows, columns)
-"""
-"""
-def draw(rows, coloumns):
-    for x in range(0, rows):
-        if (x % 2 == 0):
-            for y in range(1, coloumns + 1):
-                if (y % 2 == 1):
-                    if (y != coloumns):
-                        print(" ", end='')
+#Create function to display playing board
+# Start Global rows and columns at 0 because positive numbers.
+rows = 0
+columns = 0
+def GridBoard(rows,columns):
+    if rows <=100 and columns <=100:
+        for r in range(1, rows + 1):
+            if r % 2 != 0:
+                for c in range(columns):
+                    if c%2 == 0:
+                        if c != columns - 1:
+                            print(" ",end="")
                     else:
-                        print(" ")
-
+                            print("|",end="")
                 else:
-                    print("|", end='')
-        else:
-            print("------")
+                    print("")
+            else:
+                print("-" * columns)
 
-draw(10,5)
+        print(True)
+    else:
+        print(False)#Otherwise 
 
+GridBoard(21,21)#True
+GridBoard(90,101)#False
+GridBoard(50,100)#True
+GridBoard(90,101)#False
+GridBoard(100,100)#True
+GridBoard(90,101)#False
