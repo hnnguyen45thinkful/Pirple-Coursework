@@ -1,0 +1,58 @@
+
+  body {
+        background-color: #DB8C44;
+        }
+
+  h1 {
+        font-size: 40px; 
+        text-align: center; 
+        color:rgb(165,42,42); 
+        text-decoration: underline; 
+        padding: 15px;
+        }
+  h2 {
+    font-size: 30px; 
+    padding: 15px;
+  }
+
+  p {
+    font-size: 25px; 
+    padding: 15px;
+  }
+
+
+  ul {
+    font-size: 25px;
+  }
+  li {
+    font-size: 20px;
+    padding: 0 auto;
+  }
+  ol {
+    font-size: 25px;
+  }
+  img {
+    width:31%; 
+    float: left; 
+    padding: 10px;
+  }
+  span.forward {
+    font-style: italic;
+    text-decoration: underline;  
+  }
+  span.word-important {
+  font-style: italic;
+  }
+    span.word-complex, span.word-confuse {
+  color: red;
+  font-style: italic;
+  font-style: normal;
+  }
+ 
+ol.roman-numerals-list {
+  list-style-type: upper-roman;
+}
+  ul.emoji-bullet-points-list{
+  list-style-image: url('images/green-leaf.png');
+
+  }
